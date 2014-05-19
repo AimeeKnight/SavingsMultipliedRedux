@@ -7,10 +7,68 @@ header, footer {
   }
 }
 
+img[alt~="Savings"] { 
+  margin-top: -30px;
+}
+
+img {
+  margin-bottom: 10px;
+}
+
+#page_navigation a {
+  color: #fff;
+}
+
+#page_navigation li {
+  margin: 2px;
+  width: 80px;
+  display: inline-block;
+}
+
+#page_navigation li:nth-child(1) {
+  background-color: #64C1C8;
+  border-radius: 20px;
+}
+
+#page_navigation li:nth-child(2) {
+  background-color: #8FB84D;
+  border-radius: 20px;
+}
+
+#page_navigation li:nth-child(3) {
+  background-color: #5B1A78;
+  border-radius: 20px;
+}
+
+#page_navigation li:nth-child(4) {
+  background-color: #E6208A;
+  border-radius: 20px;
+}
+
+.button {
+  background-color: #E6208A;
+  border: #E6208A;
+  border-radius: 20px;
+  float: right;
+}
+
 #devise_navigation li {
   display: inline;
   margin: 20px;
   float: right;
+  color: #64C1C8;
+}
+
+.right-column h6 {
+  color: #64C1C8;
+}
+
+.left-column h5 {
+  color: #8FB84D;
+}
+.left-column p {
+  color: #64C1C8;
+  font-size: 18px;
 }
 
 #content {
@@ -21,16 +79,42 @@ header, footer {
   overflow: hidden;
 }
 
+.social {
+  background-color: #fff;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.social ul li {
+  display: inline;
+  margin: 20px;
+}
+
+#dotted {
+  background-image: asset-data-url('homepage/dotted_line_44_36.png');
+  background-repeat:repeat-x;
+  height: 30px;
+}
+
+#tree {
+  float: right;
+  clear: both;
+  margin-top: 150px
+}
+
 ul#main_navigation li {
   width: 100%;
   max-width: 100%;
   display: inline;
+  margin: 30px;
 }
 
 ul#main_navigation {
   background-color: #f1BEC8;
   text-align: center;
   margin-bottom: 0px;
+  height: 50px;
+  line-height: 50px;
 }
 
 ul#main_navigation li a{
@@ -64,6 +148,9 @@ footer ul, header ul {
   .right-column {
     @include grid-column($right-column-size);
   }
+  .full-column {
+    @include grid-column(12);
+  }
 }
 
 body {
@@ -72,14 +159,17 @@ body {
 
 #content {
   padding: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
 }
 
 .full-width-footer {
   width: 100%;
   max-width: 100%; 
   background-color: #64C1C8;
+  color: #fff;
+}
+
+.full-width-footer a {
+  color: #fff;
 }
 
 .full-width-header {
@@ -92,6 +182,16 @@ header {
   background-color: #fff;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+}
+
+label.string {
+  display: none;
+ }
+
+input.string {
+  margin-top: 8px;
+  margin-left: -210px;
+  border: 3px solid #600D20;
 }
 
 $small-range: (0em, 30em); /* 0, 640px */

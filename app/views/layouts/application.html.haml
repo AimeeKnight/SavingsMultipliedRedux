@@ -42,7 +42,7 @@
             %li= link_to "Contact", "/pages/contact"
             %li= link_to "Blog", "/pages/blog"
             %li= link_to "Press", "/pages/press"
-          %h2 where parents of multiples save, sell &amp; share
+          %h6 where parents of multiples save, sell &amp; share
     .full-column.full-width-header
       %ul#main_navigation
         %li= link_to "Buy", auctions_path
@@ -56,6 +56,14 @@
       .alert= alert
 
       = yield
+      
+  #content.social.full-column
+    #dotted
+    %ul
+      %li= image_tag "homepage/facebook_callout.png"
+      %li= image_tag "homepage/twitter_callout.png"
+      %li= image_tag "homepage/message_board_callout.png"
+      %li= image_tag "homepage/special_offers_callout.png"
   .full-column.full-width-footer
     %footer
       %ul
