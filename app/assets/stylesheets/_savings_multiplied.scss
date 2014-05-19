@@ -15,34 +15,28 @@ img {
   margin-bottom: 10px;
 }
 
-#page_navigation a {
-  color: #fff;
-}
-
-#page_navigation li {
-  margin: 2px;
-  width: 80px;
-  display: inline-block;
-}
-
-#page_navigation li:nth-child(1) {
-  background-color: #64C1C8;
-  border-radius: 20px;
-}
-
-#page_navigation li:nth-child(2) {
-  background-color: #8FB84D;
-  border-radius: 20px;
-}
-
-#page_navigation li:nth-child(3) {
-  background-color: #5B1A78;
-  border-radius: 20px;
-}
-
-#page_navigation li:nth-child(4) {
-  background-color: #E6208A;
-  border-radius: 20px;
+#page_navigation {
+  li {
+    border-radius: 20px;
+    margin: 2px;
+    width: 80px;
+    display: inline-block;
+  }
+  li:nth-child(1) {
+    background-color: #64C1C8;
+  }
+  li:nth-child(2) {
+    background-color: #8FB84D;
+  }
+  li:nth-child(3) {
+    background-color: #5B1A78;
+  }
+  li:nth-child(4) {
+    background-color: #E6208A;
+  }
+  a {
+    color: #fff;
+  }
 }
 
 .button {
@@ -66,6 +60,7 @@ img {
 .left-column h5 {
   color: #8FB84D;
 }
+
 .left-column p {
   color: #64C1C8;
   font-size: 18px;
@@ -73,6 +68,8 @@ img {
 
 #content {
   background-color: #fff;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 #main_navigation {
@@ -81,13 +78,10 @@ img {
 
 .social {
   background-color: #fff;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-}
-
-.social ul li {
-  display: inline;
-  margin: 20px;
+  ul li {
+    display: inline;
+    margin: 20px;
+  }
 }
 
 #dotted {
@@ -186,12 +180,64 @@ header {
 
 label.string {
   display: none;
+}
+
+#auction_search_search_term.string.optional {
+   margin-left: -190px;
+   margin-top: 7px;
+   border: 3px solid #600D20;
+   background-image: asset-data-url('search-icon.png');
+   background-repeat: no-repeat;
+   background-position: left center; 
  }
 
-input.string {
-  margin-top: 8px;
-  margin-left: -210px;
-  border: 3px solid #600D20;
+/********** RESULTS **********/
+
+#search-content {
+  @include grid-row();
+
+  $left-column-size: 4;
+  $right-column-size: 12 - $left-column-size;
+  .left-column {
+    @include grid-column($left-column-size);
+    background-color: #E9FAC7;
+    border-radius: 20px;
+  }
+  .right-column {
+    @include grid-column($right-column-size);
+  }
+  .full-column {
+    @include grid-column(12);
+  }
+}
+
+#auction_search_sidebar form {
+  float: none;
+}
+
+#auction_search_sidebar p {
+  color: #77AB0F;
+}
+
+#search-content p {
+  color: #77AB0F;
+}
+
+.title {
+  color: #77AB0F;
+}
+
+
+input#auction_search_search_term.string.optional.special {
+  margin-left: 0px;
+}
+
+div.auction {
+  display: inline-block;
+  margin: 10px;
+  height: 100px !important;
+  width: 100px !important;
+  background-color: #E9FAC7;
 }
 
 $small-range: (0em, 30em); /* 0, 640px */

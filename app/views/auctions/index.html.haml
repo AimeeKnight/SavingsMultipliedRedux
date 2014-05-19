@@ -1,18 +1,24 @@
-%ul.breadcrumb_navigation
-  %li= link_to "All", auctions_path
-  - if @auction_search.siblings_type
-    %li= link_to @auction_search.siblings_type, auctions_path( @auction_search.to_hash )
-  - if @auction_search.child_configuration
-    %li
-      = link_to auctions_path(@auction_search.to_hash), title: @auction_search.child_configuration.genders do
-        = render @auction_search.child_configuration
+#search-content
+  .left-column
+    %p Limit your search:
+    %hr
+    = render 'auction_searches/auction_sort'
+    = render @auction_search
 
-= render 'auction_searches/auction_sort'
+  .right-column
 
-= render @auction_search
+    - if @auctions.empty?
+      .alert No auctions found with this criteria.
+    - else
+      #auctions
+      = render @auctions
 
-- if @auctions.empty?
-  .alert No auctions found with this criteria.
-- else
-  #auctions
-    = render @auctions
+    %ul.breadcrumb_navigation
+      %li= link_to "All", auctions_path
+      - if @auction_search.siblings_type
+        %li= link_to @auction_search.siblings_type, auctions_path( @auction_search.to_hash )
+      - if @auction_search.child_configuration
+        %li
+          = link_to auctions_path(@auction_search.to_hash), title: @auction_search.child_configuration.genders do
+            = render @auction_search.child_configuration
+
