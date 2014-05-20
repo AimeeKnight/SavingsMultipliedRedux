@@ -2,10 +2,11 @@
   .left-column
     %p Limit your search:
     %hr
-    = render 'auction_searches/auction_sort'
     = render @auction_search
 
   .right-column
+    .sort-by
+      = render 'auction_searches/auction_sort'
 
     - if @auctions.empty?
       .alert No auctions found with this criteria.
@@ -19,6 +20,7 @@
         %li= link_to @auction_search.siblings_type, auctions_path( @auction_search.to_hash )
       - if @auction_search.child_configuration
         %li
+          .result
           = link_to auctions_path(@auction_search.to_hash), title: @auction_search.child_configuration.genders do
             = render @auction_search.child_configuration
 

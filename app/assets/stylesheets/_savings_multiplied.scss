@@ -7,7 +7,7 @@ header, footer {
   }
 }
 
-img[alt~="Savings"] { 
+img[alt~="Savings"] {
   margin-top: -30px;
 }
 
@@ -70,10 +70,29 @@ img {
   background-color: #fff;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  padding: 30px;
 }
 
 #main_navigation {
   overflow: hidden;
+  background-color: #f1BEC8;
+  text-align: center;
+  margin-bottom: 0px;
+  height: 50px;
+  line-height: 50px;
+
+  li {
+    width: 100%;
+    max-width: 100%;
+    display: inline;
+    margin: 30px;
+
+    a {
+      color: #600D20;
+      font-weight: bold;
+      margin: 20px;
+    }
+  }
 }
 
 .social {
@@ -93,37 +112,16 @@ img {
 #tree {
   float: right;
   clear: both;
-  margin-top: 150px
-}
-
-ul#main_navigation li {
-  width: 100%;
-  max-width: 100%;
-  display: inline;
-  margin: 30px;
-}
-
-ul#main_navigation {
-  background-color: #f1BEC8;
-  text-align: center;
-  margin-bottom: 0px;
-  height: 50px;
-  line-height: 50px;
-}
-
-ul#main_navigation li a{
-  color: #600D20;
-  font-weight: bold;
-  margin: 20px;
+  margin-top: 150px;
 }
 
 form {
   width: 110px;
   float: right;
-}
 
-form input {
-  border-radius: 10px !important;
+  input {
+    border-radius: 10px !important;
+  }
 }
 
 footer ul, header ul {
@@ -151,19 +149,14 @@ body {
   background-color: #64C1C8;
 }
 
-#content {
-  padding: 30px;
-}
-
 .full-width-footer {
   width: 100%;
   max-width: 100%; 
   background-color: #64C1C8;
   color: #fff;
-}
-
-.full-width-footer a {
-  color: #fff;
+  a {
+    color: #fff;
+  }
 }
 
 .full-width-header {
@@ -178,17 +171,14 @@ header {
   border-top-right-radius: 30px;
 }
 
-label.string {
-  display: none;
-}
-
-#auction_search_search_term.string.optional {
-   margin-left: -190px;
+#auction_search_search_term {
+   margin-left: -210px;
    margin-top: 7px;
-   border: 3px solid #600D20;
+   border: 3px solid #eb6d8a;
    background-image: asset-data-url('search-icon.png');
    background-repeat: no-repeat;
-   background-position: left center; 
+   background-position: 5px 5px; 
+   padding: 15px;
  }
 
 /********** RESULTS **********/
@@ -211,12 +201,24 @@ label.string {
   }
 }
 
-#auction_search_sidebar form {
-  float: none;
+.sort-by {
+  display: inline-block;
 }
 
-#auction_search_sidebar p {
-  color: #77AB0F;
+#auction_search_sidebar {
+
+  form {
+    float: none;
+  }
+  li {
+    list-style-type: none;
+  }
+  p, a {
+    color: #77AB0F;
+  }
+  input {
+    border: 3px solid #77AB0F;
+  }
 }
 
 #search-content p {
@@ -227,8 +229,7 @@ label.string {
   color: #77AB0F;
 }
 
-
-input#auction_search_search_term.string.optional.special {
+#auction_search_search_term.special {
   margin-left: 0px;
 }
 
@@ -239,6 +240,8 @@ div.auction {
   width: 100px !important;
   background-color: #E9FAC7;
 }
+
+/********** MEDIA QUERIES **********/
 
 $small-range: (0em, 30em); /* 0, 640px */
 $small-only: "#{$screen} and (max-width: 40em)" !default;
