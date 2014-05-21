@@ -29,7 +29,7 @@ feature "User searches auctions" do
     active_auctions
     visit '/'
     click_link "Buy"
-    within "header" do
+    within "#main_navigation" do
       fill_in "Search", with: "foo"
       click_button "Search"
     end
