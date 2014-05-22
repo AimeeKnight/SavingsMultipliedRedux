@@ -59,8 +59,8 @@ feature "User searches auctions" do
     active_auctions
     visit '/'
     click_link "Buy"
-    within "header" do
-      fill_in "Search", with: "foo"
+    within "#auction_search_sidebar" do
+      fill_in "Search term", with: "foo"
       click_button "Search"
     end
     # This causes an error if it appears more than once:

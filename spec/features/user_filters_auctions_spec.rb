@@ -46,8 +46,8 @@ feature "User filters current auctions" do
   scenario "no results" do
     all_auctions =  %w{a b c d e f g}
     visit '/'
-    within "body" do
-      fill_in "#new_auction_search", with: "notgoingtohaveresults"
+    within "#new_auction_search" do
+      fill_in "auction_search[search_term]", with: "notgoingtohaveresults"
     end
     click_button "Search"
     page.should have_no_auction_results(all_auctions)
