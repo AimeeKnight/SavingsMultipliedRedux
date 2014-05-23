@@ -17,6 +17,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn'
 gem 'zurb-foundation'
+gem 'fabrication'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
@@ -28,7 +29,6 @@ end
 group :test, :development do
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'fabrication'
   gem 'launchy'
   gem 'poltergeist'
   gem 'rspec-rails'
